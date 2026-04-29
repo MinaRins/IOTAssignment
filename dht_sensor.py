@@ -1,15 +1,22 @@
-import Adafruit_DHT
 import time
+import adafruit_dht
+import board
 
-sensor = Adafruit_DHT.DHT11
-pin = 4
+dht = adafruit_dht.DHT11(board.D4)
 
 while True:
-    humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
+    try:
+        temperature = dht.temperature
+        humidity = dht.humidity
 
-    if humidity is not None and temperature is not None:
-        print(f"Temp: {temperature:.1f}°C  Humidity: {humidity:.1f}%")
-    else:
-        print("Sensor read failed")
+        print(f"Temp: {temperature:.1f}°C")
+        print(f"Humidity: {humidity:.1f}%")
+
+    except RuntimeError:
+        print("Read failed, retrying...")
 
     time.sleep(2)
+import adafruit_dht
+import board
+
+dht = adafruit_dht
