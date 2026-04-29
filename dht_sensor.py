@@ -2,7 +2,7 @@ import time
 import adafruit_dht
 import board
 
-dht = adafruit_dht.DHT11(board.D4)
+dht = adafruit_dht.DHT11(board.D5)
 
 while True:
     try:
