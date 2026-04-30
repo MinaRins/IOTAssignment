@@ -1,5 +1,23 @@
 # IOTAssignment
 
-<h2>Smart Weather Station</h2>
-<h3>my smart weather station will collects environmental data such as temperature and humidity using the grove temp+humi
-<h2>I will be using python</h2>
+## Smart Weather Station
+
+This project is an IoT-based Smart Weather Station designed to collect environmental data such as temperature and humidity using a Grove Temperature & Humidity sensor connected to a Raspberry Pi.
+
+## What I've done so far
+
+- Raspberry Pi set up and connected via SSH  
+- GitHub repository created and linked to the Raspberry Pi  
+- Python virtual environment configured  
+- Required libraries installed for sensor communication  
+- DHT11 (Grove Temp & Humidity) sensor connected and working  
+- Python script (`dht_sensor.py`) developed to read real-time temperature and humidity data  
+- Live sensor readings successfully displayed in the terminal  
+
+## Technologies Used
+
+- Python  
+- Raspberry Pi OS  
+- DHT11 Temperature & Humidity Sensor  
+- GPIO (via adafruit-circuitpython-dht library)  
+- Git & GitHub  
