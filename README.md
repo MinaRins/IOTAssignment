@@ -11,8 +11,8 @@ This project is an IoT-based Smart Weather Station designed to collect environme
 - Python virtual environment configured  
 - Required libraries installed for sensor communication  
 - DHT11 (Grove Temp & Humidity) sensor connected and working  
-- Python script (`dht_sensor.py`) developed to read real-time temperature and humidity data  
-- Live sensor readings successfully displayed in the terminal  
+- Python script (`dht_sensor.py`) developed to read current temperature and humidity data  
+- Live sensor readings displayed in the terminal  
 
 ## Technologies Used
 
