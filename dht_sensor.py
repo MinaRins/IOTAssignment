@@ -1,7 +1,8 @@
-import time
 import requests
 import adafruit_dht
 import board
+import json
+import time
 
 BLYNK_TOKEN = "W_oWJ1QxAj7f_u-BDfvAynUFtdlkiK5z"
 
@@ -21,8 +22,14 @@ while True:
         humidity = dht.humidity
 
         if temperature is not None and humidity is not None:
-            print(f"Temp: {temperature:.1f}°C")
-            print(f"Humidity: {humidity:.1f}%")
+
+            data = {
+                "temperature": temperature,
+                "humidity": humidity,
+                "timestamp": time.time()
+            }
+
+            print(json.dumps(data))
 
             send("v0", temperature)
             send("v1", humidity)
